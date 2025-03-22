@@ -38,7 +38,7 @@ body{
     z-index: 100;
     transition: .3s;
 }
-.header.sticky{
+.header.sticky {
    background: var(--bg-color);
    }
    
@@ -130,6 +130,7 @@ body{
             /* position: relative; */
             font-size: 1.6rem;
             margin: 2rem 0 4rem;
+            text-align: justify;
         }
         .btn-box{
             position: relative;
@@ -312,6 +313,8 @@ body{
                 /* position: relative; */
                 font-size: 1.6rem;
                 margin: 2rem 0 3rem;
+                text-align: justify;
+
             }
             .btn-box.btns {
                 display: inline-block;
@@ -455,9 +458,16 @@ body{
              .skills-content .progress{
                 padding: 1rem 0;
              }
+             .skills-content .progress h3 {
+               font-size: 1.8rem;
+               display: flex;
+               justify-content: space-between;
+               gap: 10px; /* দুটি উপাদানের মধ্যে 10px ফাঁকা থাকবে */
+           }
+           
 
-             .skills-content .progress h3{
-                font-size: 1.7rem;
+             .skills-content .progress p{
+                font-size: 1.5rem;
                 display: flex;
                 justify-content: space-between;
              }
@@ -506,7 +516,7 @@ body{
 
              .contact{
                 min-height: auto;
-                padding-bottom: 30rem;
+                padding-bottom: 50rem;
              }
              .contact form{
                 max-width: 70rem;
@@ -568,7 +578,7 @@ body{
                 display: flex;
             }
             .contact form  .textarea-field textarea {
-                resize: none;
+                resize: vertical;
             }
             
             .contact form .btn-box.btns .btn{
@@ -667,7 +677,7 @@ body{
                      left: -100%;
                      width: 100%;
                      padding: 1rem 4%;
-                     background: var(--bg-color);
+                     background: var(--main-color);
                      box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .2);
                      z-index: 1;
                      transition: .25s ease;
@@ -795,6 +805,12 @@ body{
             75%,
             81%{
                 opacity: 0;
+            }
+          }
+
+          @keyframes aboutSpinner {
+            100% {
+               transform: translate(-50%, -50%) rotate(360deg)  ;
             }
           }
 
